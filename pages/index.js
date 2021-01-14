@@ -13,7 +13,7 @@ function Endereco() {
     }
     function buscarEndereco() {
         if (cep != "") {
-            axios.get("http://viacep.com.br/ws/" + cep + "/json")
+            axios.get("https://viacep.com.br/ws/" + cep + "/json")
                 .then(response => {
                     if (response.data != null)
                         setEndereco(response.data.logradouro + " - " + response.data.bairro + " - " + response.data.localidade + " - " + response.data.uf);
